@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -6,215 +6,341 @@
     box-sizing: border-box;
 }
 
-body{
-    font-family: "komet", sans-serif;
+body {
     background-color: #F2F2F2;
 }
 
-.index{
-    background-image: url("../img/olympics.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
+main {
+    margin: auto;
+    width: 325px;
 }
 
-nav{
-    background-color: #A7C5C5;
-    height: 80px;
+.main-home {
+    width: 100%;
+}
+
+footer {
+    width: 375px;
+    height: 20px;
+    flex-shrink: 0;
+    background: #F26457;
+}
+
+footer p {
+    color: #F2F2F2;
+    text-align: center;
+    justify-content: center;
+}
+
+/* CSS Navigatie */
+
+nav {
+    background-color: #F26457;
+    height: 50px;
     width: 100%;
     position: sticky;
 }
 
-label.logo{
-    color: #fff;
-    font-size: 20px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: 700;
+label.logo img {
+    height: 40px;
+    margin-top: 5px;
 }
 
-nav ul{
+nav ul {
     float: right;
     margin-right: 20px;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
-    line-height: 80px;
+    line-height: 50px;
     margin: 0 5px;
 }
 
-nav ul li a{
-    color: #fff;
+nav ul li a {
+    font-family: "jumble", sans-serif;
+    color: #F2F2F2;
     font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
 }
 
-a.active,a:hover{
-    background-color: #3C3940;
-    transition: .5s;
-}
-
-.checkbtn{
+.checkbtn {
     font-size: 30px;
-    color: #fff;
+    color: #F2F2F2;
     float: right;
-    line-height: 80px;
+    line-height: 50px;
     margin-right: 40px;
     cursor: pointer;
     display: none;
 }
 
-#check{
+#check {
     display: none;
 }
 
-article{
-    width: 500px;
-    color: #fff;
-    float: right;
-    margin-right: 20%;
-    margin-top: 15%;
-    -webkit-animation: slide-top 0.5s ease-in 0.5s both;
-	        animation: slide-top 0.5s ease-in 0.5s both;
-}
-
-article h1{
-    margin-bottom: 15px;
-}
-
-article p{
-    font-size: 15px;
-}
-
-@-webkit-keyframes article {
-    0% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-    }
-    100% {
-      -webkit-transform: translateY(-100px);
-              transform: translateY(-100px);
-    }
-  }
-  @keyframes slide-top {
-    0% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-    }
-    100% {
-      -webkit-transform: translateY(-100px);
-              transform: translateY(-100px);
-    }
-  }
-
-article.formulier{
-    border: 1px solid red;
-    width: 1000px;
-    background-color: #fff;
-    box-shadow: 10px 10px 44px -3px rgba(0,0,0,0.21);
-    border-radius: 10px;
-}
-
-article.formulier h1{
-    color: #3C3940;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    font-size: 30px;
-}
-
-article.formulier p{
-    color: #3C3940;
-    display: flex;
-    justify-content: center;
-}
-
-footer{
-    height: 30px;
-    width: 100%;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    background-color: #A7C5C5;
-    text-align: center;
-}
-
-footer p{
-    color: #fff;
-    font-size: 15px;
-    line-height: 30px;
-}
-
-footer p a{
-    color: #fff;
-} 
-
-
-@media (max-width: 952px){
-    nav h1{
-        font-size: 30px;
-        padding-left: 50px;
-    }
-
-    nav ul li a{
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 858px){
-    .checkbtn{
+@media (max-width: 375px) {
+    .checkbtn {
         display: block;
     }
 
-    nav{
-        background: #A7C5C5;
+    nav {
+        position: relative;
     }
 
-    label.logo{
+    label.logo {
         font-size: 20px;
         padding: 0 30px;
     }
 
-    ul{
+    ul {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #A7C5C5;
+        background: #F26457;
         left: -100%;
         text-align: center;
         transition: all .5s;
         z-index: 99;
     }
 
-    nav ul li{
+    nav ul li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
 
-    nav ul li a{
+    nav ul li a {
         font-size: 20px;
     }
 
-    a:hover,a.active{
-        background: none;
-        color: #3C3940;
-    }
-
-    #check:checked ~ ul{
+    #check:checked~ul {
         left: 0;
     }
+}
 
-    .index{
-        background-image: url(../img/olympics-mobile.jpg);
-        background-size: cover; 
-        background-repeat: no-repeat;
-    }
+/* CSS Algemeen */
+h1 {
+    font-family: "jumble", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #A3BF8F;
+    font-size: 24px;
+    width: 260px;
+    text-align: center;
+    margin: auto;
+}
 
-    article{
-        width: 250px;
-        margin-top: 150px;
-    }
+h2 {
+    font-family: "jumble", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #A3BF8F;
+    font-size: 20px;
+}
+
+h3 {
+    font-family: "jumble", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #F27457;
+    font-size: 40px;
+}
+
+p {
+    font-family: "soleil", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: justify;
+}
+
+article h1 {
+    padding-top: 30px;
+}
+
+article p {
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.blok {
+    width: 324px;
+    margin-bottom: 15px;
+    border-radius: 16px;
+    background: #F2CF66;
+    box-shadow: 1px 2px 9px 2px rgba(0, 0, 0, 0.25);
+}
+
+.blok p {
+    margin-left: 15px;
+    width: 260px;
+}
+
+.blok-inhoud {
+    display: flex;
+    margin: 15px;
+}
+
+/* CSS Homepage */
+
+.afbeelding {
+    width: 375px;
+    height: 150px;
+    background-image: url(../img/headerafbeelding.jpg);
+    background-size: cover;
+}
+
+
+.main-inhoud {
+    margin: auto;
+    width: 325px;
+}
+
+.main-inhoud h1 {
+    font-size: 35px;
+}
+
+.home {
+    margin: auto;
+    width: 325px;
+}
+
+.home p {
+    margin-bottom: -20px;
+}
+
+.home button {
+    background-color: #F2CF66;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 100px;
+    margin-bottom: 30px;
+}
+
+.home button a{
+    color: #000;
+}
+
+.banner {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 375px;
+    background-color: #F27457;
+    padding: 20px;
+}
+
+.banner-inhoud p {
+    color: #F2F2F2;
+    margin: auto;
+    text-align: center;
+    line-height: 35px;
+    font-size: 30px;
+    width: 300px;
+}
+
+.knop {
+    margin-top: 15px;
+}
+
+.blok-3 {
+    width: 150px;
+    height: 190px;
+    border-radius: 16px;
+    background: #F2CF66;
+    box-shadow: 1px 2px 9px 2px rgba(0, 0, 0, 0.25);
+}
+
+.blok-3-inhoud  img{
+    margin-top: 20px;
+    margin-left: 58px;
+    margin-right: 58px;
+    width: 40px;
+}
+
+.blok-3-inhoud p{
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.rij-2 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+/* CSS Geef je spullen een tweede leven */
+
+.waarom-dit {
+    margin-top: 30px;
+}
+
+/* CSS Waarom is tweedehands goed? */
+
+.blok-2 {
+    width: 150px;
+    height: 180px;
+    border-radius: 16px;
+    background: #F2CF66;
+    box-shadow: 1px 2px 9px 2px rgba(0, 0, 0, 0.25);
+}
+
+.blok-2-inhoud  img{
+    margin-top: 20px;
+    margin-left: 58px;
+    margin-right: 58px;
+    width: 40px;
+}
+
+.blok-2-inhoud p{
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.rij {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.koelkast {
+    width: 325px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #F27457;
+    box-shadow: 1px 2px 9px 2px rgba(0, 0, 0, 0.25);
+}
+
+.koelkast p {
+    text-align: justify;
+    margin: 15px;
+    padding-top: 15px;
+    color: #F2F2F2;
+}
+
+.koelkast-inhoud {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 15px;
+}
+
+.koelkast-plaatje {
+    width: 133px;
+    border-radius: 12px;
+    background: #FFF;
+}
+
+.koelkast-plaatje p {
+    color: #000;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.koelkast-plaatje img {
+    width: 64px;
+    display: flex;
+    margin: auto;
 }
